@@ -1,0 +1,21 @@
+# jemdoc: menu{MENU}{mandelbrot-set.html}
+= Mandelbrot Set
+
+~~~
+{}{raw}
+<canvas id="myCanvas" height="200px" width="200px">Your Browser doesn't support label Canvas.</canvas>
+<script type="text/javascript">
+    function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "mandelbrot-set/draw.js";
+        document.body.appendChild(element);
+    }
+    if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
+</script>
+~~~
+
+Credit: [https://github.com/owen8877/blog/blob/gh-pages/pages/20160205%20Mandelbrot%20Set/index.html here]
