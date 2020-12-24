@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Hungry Snake on the Poincare Disk</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Menu</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-category">Fun Stuff</div>
+<div class="menu-item"><a href="mandelbrot-set.html">Mandelbrot&nbsp;Set</a></div>
+<div class="menu-item"><a href="lights-off.html">Lights&nbsp;Off</a></div>
+<div class="menu-item"><a href="hungry-snake.html" class="current">Hungry&nbsp;Snake&nbsp;on&nbsp;<br /> the&nbsp;Poincare&nbsp;Disk</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Hungry Snake on the Poincare Disk</h1>
+</div>
+<h2 id="score">\\\ Press space to start ///</h2>
+
+<table class="imgtable">
+<tr>
+<td align="left" valign="top">
+
+<p id="hscore"></p>
+<br />
+<input type="button" onclick="restart()" value="Restart" />
+<br />
+<br />
+<input type="checkbox" id="difficulty" onclick="t_hard()" />Hard Mode
+<br />
+<br />
+<input type="checkbox" id="debug" onclick="debug()" />Debug Mode
+<br />
+<br />
+<p id="showKey"></p>
+<div id="debugdir" style="display:none;">
+    <input type="button" value="Set As Left" onclick="setkey(0)" />
+    <br />
+    <br />
+    <input type="button" value="Set As Right" onclick="setkey(1)" />
+    <br />
+    <br />
+    <input type="button" value="Set As Up" onclick="setkey(2)" />
+    <br />
+    <br />
+    <input type="button" value="Set As Down" onclick="setkey(3)" />
+    <br />
+    <br />
+    <input type="button" value="Faster" onclick="t_nice()" />
+    <br />
+    <br />
+    <p id="fps"></p>
+</div>
+
+<td align="left">
+<canvas id="mainCanvas" height="400px" width="400px"></canvas>
+<script type="text/javascript" src="hungry-snake/queue.js"></script>
+<script type="text/javascript" src="hungry-snake/complex.js"></script>
+<script type="text/javascript" src="hungry-snake/point.js"></script>
+<script type="text/javascript" src="hungry-snake/line.js"></script>
+<script type="text/javascript" src="hungry-snake/transform.js"></script>
+<script type="text/javascript" src="hungry-snake/element.js"></script>
+<script type="text/javascript" src="hungry-snake/model.js"></script>
+<script type="text/javascript" src="hungry-snake/draw.js"></script>
+<script type="text/javascript" src="hungry-snake/main.js"></script>
+</td>
+</tr>
+</table>
+<h1></h1>
+<p>Ported from <a href="https://github.com/owen8877/Geometry/" target=&ldquo;blank&rdquo;>Geometry</a> by owen8877 and shsty with credit: <a href="https://github.com/owen8877/blog/raw/gh-pages/pages/20160213%20Hungry%20Snake/index.html" target=&ldquo;blank&rdquo;>here</a>
+</p>
+<p>Use ↑↓←→ to control the snake
+</p>
+<div id="footer">
+<div id="footer-text">
+Page generated 2020-12-23 20:15:03 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

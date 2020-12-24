@@ -1,0 +1,129 @@
+# jemdoc: menu{MENU}{lights-off.html}
+= Lights Off
+
+~~~
+{}{raw}
+<canvas id="mainCanvas" height="400px" width="400px"></canvas>
+<br />
+<b id="win"></b>
+<script type="text/javascript">
+    function drawRect(gridx, gridy, ratio, color, alpha){
+        ctx.fillStyle = color;
+        ctx.globalAlpha = alpha;
+        var left = (gridx+(1-ratio)/2.0)*block;
+        var right = (gridx+(1+ratio)/2.0)*block;
+        var top = (gridy+(1-ratio)/2.0)*block;
+        var bottum = (gridy+(1+ratio)/2.0)*block;
+        ctx.fillRect(left, top, right-left, bottum-top);
+    }
+    
+    function drawSelect(gridx, gridy, color, alpha){
+        var ratio = 0.2;
+        ctx.fillStyle = color;
+        ctx.globalAlpha = alpha;
+        var grid = [[ratio,ratio], [ratio,2-ratio], [2-ratio,ratio], [2-ratio,2-ratio]];
+        for (var i = 0; i < 4; ++i) {
+            var left = (gridx+(grid[i][0]-ratio)/2.0)*block;
+            var right = (gridx+(grid[i][0]+ratio)/2.0)*block;
+            var top = (gridy+(grid[i][1]-ratio)/2.0)*block;
+            var bottum = (gridy+(grid[i][1]+ratio)/2.0)*block;
+            ctx.fillRect(left, top, right-left, bottum-top);
+        }
+    }
+    
+    function updateCanvas(){
+        ctx.clearRect(0, 0, c.width, c.height);
+        drawSelect(selectx, selecty, "#303F9F", 0.5);
+        for (var x = 0; x < 5; ++x) {
+            for (var y = 0; y < 5; ++y) {
+                drawRect(x, y, 0.8, colorIndex[lights[x][y]], 0.6);
+                drawRect(x, y, 0.4, colorIndex[lights[x][y]], 1.0);
+            }
+        }
+    }
+    
+    function select(){
+        lights[selectx][selecty] = (lights[selectx][selecty]+1) % 5;
+        if (selectx > 0) lights[selectx-1][selecty] = (lights[selectx-1][selecty]+1) % 5;
+        if (selecty > 0) lights[selectx][selecty-1] = (lights[selectx][selecty-1]+1) % 5;
+        if (selectx < 4) lights[selectx+1][selecty] = (lights[selectx+1][selecty]+1) % 5;
+        if (selecty < 4) lights[selectx][selecty+1] = (lights[selectx][selecty+1]+1) % 5;
+            
+        if (lights.toString() === final.toString() && !lock) {
+            document.getElementById("win").innerHTML = "You Win!";
+            lock = true;
+        }
+    }
+
+    function update(){
+        var keyCode = event.keyCode;
+        //document.getElementById("showKey").innerHTML = keyCode;
+        if (keyCode === 38) {
+            //up
+            if (selecty > 0) selecty -= 1;
+        }
+        else if (keyCode === 40) {
+            //down
+            if (selecty < 4) selecty += 1;
+        }
+        else if (keyCode === 37) {
+            //left
+            if (selectx > 0) selectx -= 1;
+        }
+        else if (keyCode === 39) {
+            //right
+            if (selectx < 4) selectx += 1;
+        }
+        else if (keyCode === 32) {
+            //blank
+            select();
+        }
+        else {
+            //console.log("Pressed", keyCode);
+        }
+        
+        updateCanvas();
+    }
+    document.onkeydown = update;
+    
+    var c = document.getElementById("mainCanvas");
+    var ctx = c.getContext("2d");
+    var block = (c.parentElement.clientWidth<400 ? c.parentElement.clientWidth : 400) / 5;
+    c.setAttribute("width", (block*5) + "px");
+    c.setAttribute("height", (block*5) + "px");
+    
+    c.onmousedown = function(e) {
+        var e = window.event || e;
+        var rect = this.getBoundingClientRect();
+        var mouseX = e.clientX - rect.left;//获取鼠标在canvsa中的坐标
+        var mouseY = e.clientY - rect.top;
+        //console.log(mouseX, mouseY);
+
+        selectx = Math.floor(mouseX / block);
+        selecty = Math.floor(mouseY / block);
+        if (selectx < 0) selectx = 0;
+        if (selectx > 4) selectx = 4;
+        if (selecty < 0) selecty = 0;
+        if (selecty > 4) selecty = 4;
+
+        select();
+        updateCanvas();
+    }
+    
+    var colorIndex = ["#FFFFFF", "#727272", "#F44336", "#FFA000", "#388E3C"];
+    
+    var lights = [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]];
+    var final = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
+    var selectx = 2, selecty = 2;
+    var lock = false;
+    updateCanvas();
+</script>
+~~~
+
+= 
+
+Game made with HTML5
+
+Use arrow keys to control the hightlighted block and use the space key to change the color of the selected block. Win when all blocks are white (i.e. all lights go out).
+
+Credit: [https://github.com/owen8877/blog/blob/gh-pages/pages/20160211%20Lights%20Off/index.html here]

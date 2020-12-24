@@ -1,0 +1,32 @@
+# jemdoc: menu{MENU}{index.html}
+= Ziheng Chen -- 陈子恒
+
+~~~
+{}{raw}
+<table class="imgtable">
+<tr>
+<td>
+<img src="me.jpg" alt="me" align="left" width="200">
+<td align="left">
+<p>
+
+<b>Ziheng Chen</b>
+<br/>
+
+Email: ziheng.chen [at] math (dot) utexas (dot) edu
+<br/>
+
+Office location: PMA 13.156
+<br/>
+
+<a href="https://scholar.google.com/citations?user=5bl0D98AAAAJ&hl=en">Google Scholar</a>
+<br/>
+
+</p>
+</td>
+</tr>
+</table>
+~~~
+
+== About Me
+I'm a second-year Ph.D. student in the Department of Mathematics at the University of Texas at Austin. My general interest lies in the field of multiscale pde computation and stochastic systems as well as uncertainty quantification. I studied at Peking University previously (2015-2019).

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Mandelbrot Set</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Menu</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-category">Fun Stuff</div>
+<div class="menu-item"><a href="mandelbrot-set.html" class="current">Mandelbrot&nbsp;Set</a></div>
+<div class="menu-item"><a href="lights-off.html">Lights&nbsp;Off</a></div>
+<div class="menu-item"><a href="hungry-snake.html">Hungry&nbsp;Snake&nbsp;on&nbsp;<br /> the&nbsp;Poincare&nbsp;Disk</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Mandelbrot Set</h1>
+</div>
+<canvas id="myCanvas" height="200px" width="200px">Your Browser doesn't support label Canvas.</canvas>
+<script type="text/javascript">
+    function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "mandelbrot-set/draw.js";
+        document.body.appendChild(element);
+    }
+    if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
+</script>
+<p>Credit: <a href="https://github.com/owen8877/blog/blob/gh-pages/pages/20160205%20Mandelbrot%20Set/index.html" target=&ldquo;blank&rdquo;>here</a></p>
+<div id="footer">
+<div id="footer-text">
+Page generated 2020-12-23 20:15:03 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

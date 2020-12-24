@@ -1,0 +1,64 @@
+# jemdoc: menu{MENU}{hungry-snake.html}
+= Hungry Snake on the Poincare Disk
+
+~~~
+{}{raw}
+<h2 id="score">\\\ Press space to start ///</h2>
+
+<table class="imgtable">
+<tr>
+<td align="left" valign="top">
+
+<p id="hscore"></p>
+<br />
+<input type="button" onclick="restart()" value="Restart" />
+<br />
+<br />
+<input type="checkbox" id="difficulty" onclick="t_hard()" />Hard Mode
+<br />
+<br />
+<input type="checkbox" id="debug" onclick="debug()" />Debug Mode
+<br />
+<br />
+<p id="showKey"></p>
+<div id="debugdir" style="display:none;">
+    <input type="button" value="Set As Left" onclick="setkey(0)" />
+    <br />
+    <br />
+    <input type="button" value="Set As Right" onclick="setkey(1)" />
+    <br />
+    <br />
+    <input type="button" value="Set As Up" onclick="setkey(2)" />
+    <br />
+    <br />
+    <input type="button" value="Set As Down" onclick="setkey(3)" />
+    <br />
+    <br />
+    <input type="button" value="Faster" onclick="t_nice()" />
+    <br />
+    <br />
+    <p id="fps"></p>
+</div>
+
+<td align="left">
+<canvas id="mainCanvas" height="400px" width="400px"></canvas>
+<script type="text/javascript" src="hungry-snake/queue.js"></script>
+<script type="text/javascript" src="hungry-snake/complex.js"></script>
+<script type="text/javascript" src="hungry-snake/point.js"></script>
+<script type="text/javascript" src="hungry-snake/line.js"></script>
+<script type="text/javascript" src="hungry-snake/transform.js"></script>
+<script type="text/javascript" src="hungry-snake/element.js"></script>
+<script type="text/javascript" src="hungry-snake/model.js"></script>
+<script type="text/javascript" src="hungry-snake/draw.js"></script>
+<script type="text/javascript" src="hungry-snake/main.js"></script>
+</td>
+</tr>
+</table>
+~~~
+
+= 
+
+Ported from [https://github.com/owen8877/Geometry/ Geometry] by owen8877 and shsty with credit: [https://github.com/owen8877/blog/raw/gh-pages/pages/20160213%20Hungry%20Snake/index.html here]
+
+Use ↑↓←→ to control the snake
+
