@@ -1,0 +1,2 @@
+othello/Othello.data filter=lfs diff=lfs merge=lfs -text
+othello/Othello.wasm filter=lfs diff=lfs merge=lfs -text
