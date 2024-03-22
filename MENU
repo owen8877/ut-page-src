@@ -1,20 +1,22 @@
 Menu
-	Home									[index.html]
-	CV										[https://www.overleaf.com/read/qgpcbpytnqzj]
+	Home													[index.html]
+	CV														[https://www.overleaf.com/read/qgpcbpytnqzj]
 
 Teaching
-	Numerical I notes						[https://www.overleaf.com/read/kvjfynvpbprz]
-	Numerical II notes						[blob/numerical_II_notes.pdf]
+	Numerical I notes										[https://www.overleaf.com/read/kvjfynvpbprz]
+	Numerical II notes										[blob/numerical_II_notes.pdf]
 
 Talks and Notes
-	Auto-parametric Resonance				[https://github.com/owen8877/autores/releases/download/note/notes.pdf]
-	RL Methods in Option\n  Pricing			[https://arxiv.org/abs/2205.05600]
+	Don't put eggs in a basket;\n  put them in hashtables	[blob/Eggs_Basket.pdf]
+	Brownian Motions with\n  Boundary Conditions			[brownian.html]
+	Auto-parametric Resonance								[https://github.com/owen8877/autores/releases/download/note/notes.pdf]
+	RL Methods in Option\n  Pricing							[https://arxiv.org/abs/2205.05600]
 
 Fun Projects
-	Othello	(3D)							[othello.html]
-	Mandelbrot Set							[mandelbrot-set.html]
-	Lights Off								[lights-off.html]
-	Hungry Snake on the \n  Poincare Disk	[hungry-snake.html]
+	Othello	(3D)											[othello.html]
+	Mandelbrot Set											[mandelbrot-set.html]
+	Lights Off												[lights-off.html]
+	Hungry Snake on the \n  Poincare Disk					[hungry-snake.html]
 	
 Random Links
-	Can you hear the shape of\n  a drum?	[https://capsncrunch.github.io/articles/can_you_hear_the_shape_of_a_drum.html]
+	Can you hear the shape of\n  a drum?					[https://capsncrunch.github.io/articles/can_you_hear_the_shape_of_a_drum.html]
